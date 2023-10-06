@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #24292e;
+    color: #fff;
+  }
+  
+  .content {
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 48px;
+    margin: 0;
+  }
+  
+  p {
+    font-size: 24px;
+  }
+  

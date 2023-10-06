@@ -1,0 +1,38 @@
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scene {
+  perspective: 800px;
+  width: 400px;
+  height: 400px;
+  position: relative;
+}
+
+.cube {
+  width: 100px;
+  height: 100px;
+  background-color: #00FFFF;
+  position: absolute;
+  transform-style: preserve-3d;
+  animation: gravity-animation 10s infinite;
+}
+
+@keyframes gravity-animation {
+  0% {
+    transform: translate3d(0, -200px, 0);
+  }
+  50% {
+    transform: translate3d(0, 200px, 0);
+  }
+  100% {
+    transform: translate3d(0, -200px, 0);
+  }
+}
+
+.content {
+  margin-top: 800px;
+}

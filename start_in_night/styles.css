@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #0000AA; /* Fond bleu */
+  }
+  
+  #stars {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: none;
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  .star {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 2px;
+    background-color: #FFF; /* Couleur des étoiles */
+    box-shadow: 0 0 10px 2px #FFF; /* Lueur des étoiles */
+    pointer-events: none;
+    animation: blink 1s infinite;
+  }
+  
+  @keyframes blink {
+    0%, 100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }

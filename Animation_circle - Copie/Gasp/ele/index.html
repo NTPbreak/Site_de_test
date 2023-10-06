@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scroll Animation with GSAP</title>
+  <style>
+    body {
+      height: 2000px;
+    }
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+<script src="../gasp.min.js"></script>
+  <script>
+        // Utilisation de require (CommonJS)
+    // const gsap = require('gsap');
+
+    // import gsap from 'gsap';
+    // alert("a");
+    // Utilisation d'import (ES modules)
+    // Code JavaScript pour animer l'élément lors du défilement
+    const box = document.querySelector('.box');
+
+    gsap.from(box, { opacity: 0, duration: 1, y: -50 }); 
+
+    // Déclencher l'animation lorsque l'utilisateur fait défiler la page
+    window.addEventListener('scroll', () => {
+      const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      gsap.to(box, { x: scrollPercent });
+    });
+  </script>
+</body>
+</html>
